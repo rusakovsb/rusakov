@@ -1,0 +1,20 @@
+name: Rusakov
+type: theme
+description: 'Rusakov theme'
+package: Core
+
+libraries:
+  - rusakov/global-styling
+
+regions:
+  header: 'Header' 
+  left: 'Left'
+  right: 'Right'
+  footer: 'Footer'  
+  nav: 'Nav'
+  popup: 'Popup'
+
+# Information
+core: '8.x'
+project: 'drupal'
+

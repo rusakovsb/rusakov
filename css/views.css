@@ -1,0 +1,141 @@
+/*-------------------------------------------*
+/* Portfolio
+/*-------------------------------------------*/
+
+.view-portfolio .view-content {
+    margin: 0 -30px;
+}
+
+.portfolio-item {
+    width: 50%;
+    padding: 0 30px 60px 30px;
+    opacity: 0;    
+}
+
+.portfolio-item:last-child {
+    padding: 0 30px;
+}
+
+.portfolio-item a {
+    display: block;
+    padding: 30px 30px 0 30px;
+    color: #fff;
+}
+
+.portfolio-item a:hover {
+    color: #fff;
+}
+
+.portfolio-item__title {
+    display: block;
+    margin: 0 0 15px 0;
+    font-size: 1.5rem; 
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.portfolio-item__description {
+    display: block;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.view-portfolio-item-description {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.portfolio-item p,
+.view-portfolio-item-description p {
+    margin: 0;
+}
+
+#cbg-link {
+    background-color: #1f9363;
+}
+
+#ageev-link {
+    background-color: #505d7a;
+}
+
+#bitus-bichan-link {
+    background-color: #58595b;
+}
+
+#miladental-link {
+    background-color: #67b534;
+}
+
+#viva-link {
+    background-color: #29b76c;
+}
+
+#grosstil-link {
+    background-color: #3a3d42;
+}
+
+#fidanzata-link {
+    background-color: #424242;
+}
+
+#bake-house-link {
+    background-color: #63332a;
+}
+
+#promshina-link {
+    background-color: #395985;
+}
+
+#megatkani-link {
+    background-color: #66242f;
+}
+
+#parketservice-link {
+    background-color: #2e2622;
+}
+
+#smlc-link {
+    background-color: #d62929;
+}
+
+#rossi-link {
+    background-color: #333333;
+}
+
+/*-------------------------------------------*
+/* Services, Prices
+/*-------------------------------------------*/
+
+.services-item,
+.prices-item  {
+    padding: 0 0 60px 0;
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+    will-change: transform;
+}
+
+.services-item:last-child,
+.prices-item:last-child {
+    padding: 0;
+}
+
+.services-item__description,
+.prices-item__description {
+    display: block;
+    line-height: 1.7;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.prices-item__price {
+	display: inline-block;
+	margin: 0 5px 15px 5px;
+    font-size: 1.5rem; 
+}
+
+.prices-item__currency {
+	vertical-align: 0.35em;
+    font-size: 1rem; 
+}
+
+
+

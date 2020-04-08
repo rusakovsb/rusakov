@@ -1,0 +1,5 @@
+# Schema for the configuration files.
+
+rusakov.settings:
+  type: rusakov_settings
+  label: 'Rusakov theme settings'

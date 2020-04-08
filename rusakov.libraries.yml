@@ -1,0 +1,15 @@
+global-styling:
+  css:
+    theme: 
+      css/main.css: {}             
+      css/views.css: {}   
+      css/responsive.css: {}
+  js:    
+    js/imagesloaded.js: {}
+    js/tweenmax.js: {}
+    js/masonry.js: {}
+    js/main.js: {}
+    js/smoothscroll.js: {}    
+  dependencies:
+    - core/jquery
+    - core/jquery.once

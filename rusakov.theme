@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+function rusakov_preprocess_html(&$variables) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $variables['attributes']['class'][] = 'page-node-' . $node->id();
+  }
+  $current_path = \Drupal::service('path.current')->getPath();
+  $variables['current_path'] = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for maintenance-page.html.twig.
+ */
+function rusakov_preprocess_maintenance_page(&$variables) {
+  // By default, site_name is set to Drupal if no db connection is available
+  // or during site installation. Setting site_name to an empty string makes
+  // the site and update pages look cleaner.
+  // @see template_preprocess_maintenance_page
+  if (!$variables['db_is_active']) {
+    $variables['site_name'] = '';
+  }
+
+  // Custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'rusakov/maintenance_page';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for node.html.twig.
+ */
+function rusakov_preprocess_node(&$variables) {
+  // Remove the "Add new comment" link on teasers or when the comment form is
+  // displayed on the page.
+  if ($variables['teaser'] || !empty($variables['content']['comments']['comment_form'])) {
+    unset($variables['content']['links']['comment']['#links']['comment-add']);
+  }
+}
